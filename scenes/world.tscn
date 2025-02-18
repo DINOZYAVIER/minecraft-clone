@@ -1,11 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://p47lqkitd8xl"]
+[gd_scene load_steps=6 format=3 uid="uid://p47lqkitd8xl"]
 
 [ext_resource type="Material" uid="uid://c1x48u3dl3n8q" path="res://scenes/materials/dirt.tres" id="1_0lq16"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7hfcv"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_kh38e"]
+sky_material = SubResource("ProceduralSkyMaterial_7hfcv")
+
+[sub_resource type="Environment" id="Environment_5xuml"]
+background_mode = 2
+sky = SubResource("Sky_kh38e")
+tonemap_mode = 2
+glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_elfjg"]
 albedo_color = Color(0, 0.392157, 0, 1)
 
 [node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5xuml")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 use_collision = true
