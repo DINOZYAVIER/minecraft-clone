@@ -3,8 +3,12 @@
 [ext_resource type="Script" path="res://scenes/scripts/player_character.gd" id="1_6t2uo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tr1jd"]
+radius = 1.0
+height = 4.0
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_q23du"]
+radius = 1.0
+height = 4.0
 
 [node name="PlayerCharacter" type="CharacterBody3D"]
 script = ExtResource("1_6t2uo")
