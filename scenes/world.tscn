@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://p47lqkitd8xl"]
+[gd_scene load_steps=7 format=3 uid="uid://p47lqkitd8xl"]
 
 [ext_resource type="Material" uid="uid://c1x48u3dl3n8q" path="res://scenes/materials/dirt.tres" id="1_0lq16"]
+[ext_resource type="PackedScene" uid="uid://c774i3qtbjvo1" path="res://scenes/player_character.tscn" id="2_au8w6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7hfcv"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -64,5 +65,5 @@ material = ExtResource("1_0lq16")
 transform = Transform3D(0.999997, -0.00254818, 0, 0.00254818, 0.999997, 0, 0, 0, 1, 0.98532, 0.98647, 0.967473)
 material = ExtResource("1_0lq16")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.76787, 4.14205)
+[node name="PlayerCharacter" parent="." instance=ExtResource("2_au8w6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 4)
