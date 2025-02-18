@@ -8,6 +8,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var sensitivity = 0.002
 
 @onready var camera_3d = $Camera3D
+@onready var ray_cast_3d = $Camera3D/RayCast3D
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -36,4 +37,15 @@ func _physics_process(delta):
 		velocity.x = 0
 		velocity.z = 0
 
+	if Input.is_action_just_pressed("left_click"):
+		if ray_cast_3d.is_colliding():
+			if ray_cast_3d.get_collider().has_method("destroy_block"):
+				ray_cast_3d.get_collider().destroy_block(ray_cast_3d.get_collision_point() - 
+				ray_cast_3d.get_collision_normal())
+
+	if Input.is_action_just_pressed("right_click"):
+		if ray_cast_3d.is_colliding():
+			if ray_cast_3d.get_collider().has_method("destroy_block"):
+				ray_cast_3d.get_collider().place_block(ray_cast_3d.get_collision_point() + 
+				ray_cast_3d.get_collision_normal(), 6)
 	move_and_slide()
