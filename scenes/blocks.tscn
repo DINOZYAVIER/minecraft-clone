@@ -59,7 +59,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_m1cu4")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8q7hn"]
-size = Vector3(2, 2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7qc3"]
 resource_name = "Blocks_Pixelart"
