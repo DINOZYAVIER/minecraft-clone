@@ -1,6 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://c774i3qtbjvo1"]
+[gd_scene load_steps=9 format=3 uid="uid://c774i3qtbjvo1"]
 
 [ext_resource type="Script" path="res://scenes/scripts/player_character.gd" id="1_6t2uo"]
+[ext_resource type="Texture2D" uid="uid://b2eootgjq0np1" path="res://resources/icons/dirt.png" id="2_2kbwg"]
+[ext_resource type="Texture2D" uid="uid://dhvq5cfassvws" path="res://resources/icons/grass.png" id="3_4mtec"]
+[ext_resource type="Texture2D" uid="uid://t0wn7is221q6" path="res://resources/icons/stone.png" id="4_00x5s"]
+[ext_resource type="Texture2D" uid="uid://5sbw0eftl4jg" path="res://resources/icons/wood.png" id="5_txhms"]
+[ext_resource type="Texture2D" uid="uid://db8qffc85nu3q" path="res://resources/icons/woodPlanks.png" id="6_35g26"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tr1jd"]
 radius = 1.0
@@ -24,3 +29,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27914, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
 target_position = Vector3(0, 0, -8)
+
+[node name="Hotbar" type="ItemList" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -138.0
+offset_top = -81.0
+offset_right = 312.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+allow_search = false
+item_count = 5
+max_columns = 5
+item_0/text = "1"
+item_0/icon = ExtResource("2_2kbwg")
+item_1/text = "2"
+item_1/icon = ExtResource("3_4mtec")
+item_2/text = "3"
+item_2/icon = ExtResource("4_00x5s")
+item_3/text = "4"
+item_3/icon = ExtResource("5_txhms")
+item_4/text = "5"
+item_4/icon = ExtResource("6_35g26")
