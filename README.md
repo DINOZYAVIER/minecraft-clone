@@ -28,4 +28,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgments
 
 - Inspired by the original [Minecraft](https://www.minecraft.net/)
-- Built using the [Godot Engine](https://godotengine.org/
+- Built using the [Godot Engine](https://godotengine.org/)
